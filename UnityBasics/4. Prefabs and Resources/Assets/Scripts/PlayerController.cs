@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private const float SPEED = 2.5f;
-
-    public UIController UI;
-    public AudioSource jumpSound;
-    public AudioSource hitSound;
     private Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
     }
+
 
     void Update()
     {
@@ -45,15 +42,7 @@ public class EnemyController : MonoBehaviour
                animator.GetCurrentAnimatorStateInfo(0).IsName("Move"))
             {
                 animator.SetTrigger("jump");
-                jumpSound.Play();
             }
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(collision.gameObject);
-        UI.ArrowHitPlayer();
-        hitSound.Play();
     }
 }

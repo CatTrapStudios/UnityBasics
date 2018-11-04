@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 366972070}
   - component: {fileID: 366972075}
   m_Layer: 0
-  m_Name: EnemyContainer
+  m_Name: PlayerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 725953926}
   - component: {fileID: 725953924}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private const float SPEED = 2.5f;
 
     public UIController UI;
-    public AudioSource jumpSound;
-    public AudioSource hitSound;
     private Animator animator;
 
     private void Start()
@@ -45,7 +43,6 @@ public class EnemyController : MonoBehaviour
                animator.GetCurrentAnimatorStateInfo(0).IsName("Move"))
             {
                 animator.SetTrigger("jump");
-                jumpSound.Play();
             }
         }
     }
@@ -54,6 +51,5 @@ public class EnemyController : MonoBehaviour
     {
         Destroy(collision.gameObject);
         UI.ArrowHitPlayer();
-        hitSound.Play();
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private const float SPEED = 2.5f;
 
